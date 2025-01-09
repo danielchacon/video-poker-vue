@@ -1,0 +1,66 @@
+$COMBINATIONS_LENGTH: 9;
+
+$logo-font-family: 'Russo One', sans-serif;
+$base-font-family: 'Inter', sans-serif;
+
+$base-font-size: 14px;
+$base-line-height: 1.4;
+$payout-value-font-size: 12px;
+$payout-value-font-size-md: 10px;
+
+$base-spacing: 14px;
+$container-width: 1200px;
+$app-min-height: 640px;
+$app-min-width: 320px;
+$app-min-height-md: 580px;
+$header-height: 42px;
+$payout-table-cell-height: (
+  ($payout-value-font-size * $base-line-height) + (calc($base-spacing / 4) * 2)
+);
+$payout-table-cell-height-md: (
+  ($payout-value-font-size-md * $base-line-height) +
+    (calc($base-spacing / 4) * 2)
+);
+$payout-table-height: $payout-table-cell-height * $COMBINATIONS_LENGTH;
+$payout-table-height-md: $payout-table-cell-height-md * $COMBINATIONS_LENGTH;
+$log-height: $base-font-size * $base-line-height + $base-spacing * 2;
+$chip-height: 60px;
+$button-height: $base-spacing + $base-font-size * $base-line-height;
+$toolbar-height: $chip-height + $base-spacing * 2;
+$toolbar-height-md: $chip-height + $button-height + $base-spacing * 3;
+$all-but-hands-height: $header-height + $payout-table-height + $log-height +
+  $chip-height + $toolbar-height + $base-spacing * 2;
+$all-but-hands-height-md: $header-height + $payout-table-height + $log-height +
+  $chip-height + $toolbar-height-md + $base-spacing * 2;
+
+$base-radius: calc($base-spacing / 2);
+
+$breakpoint-medium-device: 768px;
+
+$base-transition-time: 0.3s;
+
+$color-white: #fff;
+$color-black: #000;
+$color-red: #ff0000;
+$color-blue: #007bff;
+$color-green: #008000;
+$color-gold: gold;
+$color-dark-blue: #111f3a;
+
+$text-color: $color-white;
+$bet-1: $color-white;
+$bet-2: $color-red;
+$bet-3: $color-blue;
+$bet-4: $color-green;
+$bet-5: $color-black;
+$success: $color-gold;
+$sunset-gradient: linear-gradient(
+  #0b1323,
+  $color-dark-blue,
+  #233c53,
+  #59697e,
+  #676b73 70%,
+  #80736a,
+  #9a6c52 90%,
+  #612b1e
+);

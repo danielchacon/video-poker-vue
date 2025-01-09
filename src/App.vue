@@ -1,47 +1,52 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+  import VHeader from '@/components/layout/VHeader.vue';
+  import PayoutTable from '@/components/PayoutTable.vue';
+  import ToolBar from '@/components/ToolBar.vue';
+  import VHand from '@/components/VHand.vue';
+  import VLog from '@/components/VLog.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="app">
+    <VHeader />
+    <main class="app__main">
+      <PayoutTable />
+      <section class="app__hand-wrapper">
+        <VHand />
+      </section>
+      <VLog />
+      <ToolBar />
+    </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<style scoped lang="scss">
+  .app {
+    display: grid;
+    grid-template-rows: $header-height minmax(0, 1fr);
+    gap: $base-spacing;
+    height: 100vh;
+    min-height: $app-min-height;
+    min-width: $app-min-width;
+    padding: $base-spacing 0;
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+    @media screen and (max-width: $breakpoint-medium-device) {
+      min-height: $app-min-height-md;
+    }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    &__main {
+      display: grid;
+      grid-template-rows: $payout-table-height minmax(0, 1fr) $log-height $toolbar-height;
+      gap: $base-spacing;
+
+      @media screen and (max-width: $breakpoint-medium-device) {
+        grid-template-rows: $payout-table-height-md minmax(0, 1fr) $log-height $toolbar-height-md;
+      }
+    }
+
+    &__hand-wrapper {
+      position: relative;
+      align-self: center;
+    }
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
