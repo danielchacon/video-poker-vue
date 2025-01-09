@@ -1,39 +1,21 @@
-# video-poker-vue
+# Видеопокер
 
-This template should help get you started developing with Vue 3 in Vite.
+![video-poker-screenshot-1](https://github.com/user-attachments/assets/419ea427-eabe-4c68-8880-a47d0e914db0)
 
-## Recommended IDE Setup
+"Видеопокер" — это игровое приложение, которое сочетает элементы слот-машин и классического покера.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Приложение не использует серверную часть, работает полностью на клиенте и не сохраняет данные.
 
-## Type Support for `.vue` Imports in TS
+**Основные особенности**:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Интерактивный интерфейс**: возможность выбрать ставку, заменить карты, сыграть на удвоение выигрыша.
+- **Микроанимации**: для улучшения восприятия и динамики игры.
 
-## Customize configuration
+**Технологии**:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+- **Vue 3**;
+- **TypeScript**;
+- **Pinia** - управление ставками и балансом игрока, раздачами, логикой интерфейса;
+- **Vitest** - тестирование проверки покерных комбинаций;
+- **SCSS**;
+- **Vite**.
